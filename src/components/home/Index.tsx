@@ -6,6 +6,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import AllList from './All';
 import TrendingList from './Trending';
 
+
 enum Type {
   All = 'all',
   Trending = 'trending',
@@ -39,6 +40,7 @@ const HomeList = () => {
       ) : (
         <TrendingList></TrendingList>
       )}
+      
     </Container>
   );
 };
@@ -46,7 +48,7 @@ const HomeList = () => {
 export default HomeList;
 
 const Container = styled.div`
-  margin-top: 30px;
-
+  margin-top: 100px;
   width: 1123px;
+  
 `;

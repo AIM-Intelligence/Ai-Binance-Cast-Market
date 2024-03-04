@@ -143,7 +143,8 @@ const AllList = () => {
           20,
           list.length,
         )}  Collections (Total of ${total})`}
-        containerStyle={{ padding: '0' }}
+        containerStyle={{ padding: '12', background: '#031B34' }}
+       
         pagination={{
           current: page,
           pageSize: 10,
@@ -153,7 +154,7 @@ const AllList = () => {
         columns={columns}
         data={list}
         loading={loading}
-        hoverBg={'#14151A'}
+        hoverBg={'#040C18'}
       />
     </Container>
   );

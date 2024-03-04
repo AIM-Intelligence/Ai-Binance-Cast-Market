@@ -14,19 +14,19 @@ export const dark = {
     },
 
     bg: {
-      bottom: '#14151A',
-      middle: '#1E2026',
+      bottom: '#040C18',
+      middle: '#040C18',
       walletTab: '#F7F7F7',
       codebox: '#262D37',
       top: {
-        normal: '#2B2F36',
-        active: '#2E323A',
+        normal: '#042c54',
+        active: '#81AFDD',
       },
     },
     scene: {
       primary: {
         normal: '#E1A325',
-        active: '#f39d53',
+        active: '#81AFDD',
         opacity: rgba('#B845FF', 0.1),
         semiOpacity: rgba('#E1A325', 0.15),
       },

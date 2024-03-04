@@ -121,7 +121,7 @@ const OtherListedList = (props: IOtherListedList) => {
         columns={columns}
         data={list}
         loading={loading}
-        hoverBg={'#14151A'}
+        hoverBg={'#042c54'}
       />
     </Container>
   );

@@ -160,7 +160,7 @@ const PurchaseList = () => {
         columns={columns}
         data={list}
         loading={loading}
-        hoverBg={'#14151A'}
+        hoverBg={'#042c54'}
       />
     </Container>
   );

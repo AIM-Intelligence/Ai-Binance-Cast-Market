@@ -118,6 +118,7 @@ const Header = () => {
           onClick={() => {
             navigate('/');
           }}
+          className='object-cover'
           src={LogoGroup}
           alt="logo"
         />
@@ -273,8 +274,8 @@ const HeaderFlex = styled(Flex)`
   position: fixed;
   width: 100%;
   z-index: 10;
-  background-color: #1e2026;
-  border-bottom: 1px #2f3034 solid;
+  background-color: #031B34;
+  border-bottom: 1px #81AFDD solid;
 `;
 const LeftCon = styled(Flex)`
   img {

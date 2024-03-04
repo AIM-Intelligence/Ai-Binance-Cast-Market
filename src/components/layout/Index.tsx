@@ -11,6 +11,7 @@ import { BuyIndex } from '../modal/buy/Index';
 import { useModal } from '../../hooks/useModal';
 import { useWalletModal } from '../../hooks/useWalletModal';
 import { WalletConnectModal } from '../wallet/WalletConnectModal';
+import { useSearchParams } from 'react-router-dom';
 
 export default function Layout({ children }: { children: ReactNode }) {
   const modalData = useModal();
@@ -48,6 +49,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <Container flexDirection={'column'} justifyContent={'space-between'}>
         <Header />
         <Main>{children}</Main>
+
         <Footer />
       </Container>
 
@@ -106,6 +108,6 @@ const Main = styled.main`
 `;
 
 const Container = styled(Flex)`
-  background-color: #000000;
+  background-color: #040c18;
   min-height: 100vh;
 `;

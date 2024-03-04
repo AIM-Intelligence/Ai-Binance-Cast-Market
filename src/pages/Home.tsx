@@ -1,77 +1,79 @@
 import styled from '@emotion/styled';
 import HomeList from '../components/home/Index';
 import { Flex } from '@totejs/uikit';
-import Bg from '../images/bg.png';
+import Bg from '../images/assets/ai.png';
+import people from '../images/assets/people.png';
 import GithubIcon from '../components/svgIcon/GithubIcon';
 import { DocIcon, FullTeamIcon, LinkArrowIcon } from '@totejs/icons';
 import DiscordIcon from '../components/svgIcon/DiscordIcon';
 import BSCIcon from '../components/svgIcon/BSCIcon';
-
+import './home.css';
+import Brand from '../components/brand/Brand';
+import Whatabc_market from '../components/whatABCMarket/WhatABCMarket';
+import CTA from '../components/cta/CTA';
+import logo from '../images/logo.png';
+import HomeFooter from '../components/layout/HomeFooter';
 const Home = () => {
   return (
-    <Container flexDirection={'column'} alignItems={'center'}>
-      <BannerInfo>
-        <img src={Bg} alt="" />
-        <Info flexDirection={'column'} gap={26}>
-          <Title>
-            AI Binance Cast<br></br> DATA MARKETPLACE
-          </Title>
-          <SubTitle>
-            A Best Practice of BNB Greenfield Cross Chain Programmable Ability.
-          </SubTitle>
-          <a
-            href="https://github.com/bnb-chain/greenfield-data-marketplace-frontend"
-            target="_blank"
-          >
-            <GithubCon
-              gap={12}
-              justifyContent={'flex-start'}
-              alignItems={'center'}
-            >
-              <GithubIcon w={22} h={22} className="githubIcon"></GithubIcon>
-              BUILD MY MARKETPLACE
-              <LinkArrowIcon w={18} h={18} className="arrow"></LinkArrowIcon>
-            </GithubCon>
-          </a>
-        </Info>
-      </BannerInfo>
-      <HomeList></HomeList>
-      <WorkInfo flexDirection={'column'} gap={37}>
-        <WorkMainTitle>How it works</WorkMainTitle>
-        <WorkItem flexDirection={'column'} gap={20}>
-          <WorkTitle>Backendless Framework </WorkTitle>
-          <WorkDesc>
-            Data-marketplace fully utilizes smart contracts, greenfield APIs,
-            and pre-defined rules to avoid complex backend deployments,
-            simplifying the deployment process to the extreme.
-          </WorkDesc>
-        </WorkItem>
-        <WorkItem flexDirection={'column'} gap={20}>
-          <WorkTitle>Fully Greenfield Hosted Website</WorkTitle>
-          <WorkDesc>
-            The data-marketplace website is hosted by greenfield, no traditional
-            cloud infrastructure，anti-Censorship.
-          </WorkDesc>
-        </WorkItem>
-        <WorkItem flexDirection={'column'} gap={20}>
-          <WorkTitle>Fully EVM Compatible</WorkTitle>
-          <WorkDesc>
-            Data-marketplace has implemented smart contracts using Solidity,
-            which are deployed on the BSC network. Users/developers on any BSC
-            don't even need to be aware of Greenfield's existence, and don't
-            need to hold any tokens on Greenfield in order to purchase and
-            access data.
-          </WorkDesc>
-        </WorkItem>
-        <WorkItem flexDirection={'column'} gap={20}>
-          <WorkTitle>Ultimate Fast Trading Experience</WorkTitle>
-          <WorkDesc>
-            Thanks to the fast blocking time of Greenfield and BSC, users can
-            complete data listing and trading in seconds.
-          </WorkDesc>
-        </WorkItem>
-      </WorkInfo>
-      <Cards
+    <section >
+      <Container flexDirection={'column'} alignItems={'center'}>
+        <BannerInfo className="overflow-x-clip abc_market__header section__padding">
+          <div className="">
+            <img
+              src={Bg}
+              alt=""
+              className="object-contain translate-x-96 translate-y-10 "
+              width={100}
+              height={100}
+            />
+            <Info flexDirection={'column'} gap={26}>
+              <Title className="gradient__text">
+                AI Binance Cast<br></br> DATA MARKETPLACE
+              </Title>
+              <div className="text-3xl">
+                Share our conversations. with AI spokespeople on various social.
+              </div>
+              <div className="abc_market__header-content__people">
+                <img
+                  src={people}
+                  style={{ width: '181.79px', height: '38px' }}
+                  className="object-contain -translate-x-32 "
+                />
+                <p className="translate-x-44">
+                  1,600 people requested access a visit in last 24 hours
+                </p>
+              </div>
+              <a href="https://ai-binance-cast.vercel.app/" target="_blank">
+                <GithubCon
+                  className="text-lg"
+                  gap={12}
+                  justifyContent={'flex-start'}
+                  alignItems={'center'}
+                >
+                  <img
+                    src={logo}
+                    alt="abc_market_logo"
+                    style={{ width: '50px', height: '50px' }}
+                    className="object-contain -translate-x-48"
+                  />
+                  <div className="translate-x-14">
+                    VISIT ABC Website & CREATE Chat Data
+                    <LinkArrowIcon
+                      w={18}
+                      h={18}
+                      className="arrow"
+                    ></LinkArrowIcon>
+                  </div>
+                </GithubCon>
+              </a>
+            </Info>
+          </div>
+        </BannerInfo>
+        <HomeList></HomeList>
+        <Brand />
+        <Whatabc_market />
+        {/* <CTA /> */}
+        {/* <Cards
         alignItems={'center'}
         justifyContent={'center'}
         flexDirection={'column'}
@@ -124,8 +126,10 @@ const Home = () => {
             </CardItem>
           </a>
         </CardCon>
-      </Cards>
-    </Container>
+      </Cards> */}
+      </Container>
+      <HomeFooter />
+    </section>
   );
 };
 
@@ -134,14 +138,14 @@ export default Home;
 const Container = styled(Flex)`
   margin-top: -80px;
   width: 100%;
-  background-color: #1e2026;
+  background-color: #040c18;
 `;
 
 const BannerInfo = styled.div`
   position: relative;
   width: 100%;
   height: 564px;
-  background-color: #000;
+  background-color: #040c18;
   img {
     position: absolute;
     min-width: 1440px;
@@ -161,12 +165,6 @@ const Title = styled.div`
   font-weight: 400;
   line-height: 58px;
   font-family: 'Zen Dots';
-`;
-
-const SubTitle = styled.div`
-  font-size: 24px;
-  font-weight: 400;
-  color: #b9b9bb;
 `;
 
 const GithubCon = styled(Flex)`
@@ -189,36 +187,9 @@ const GithubCon = styled(Flex)`
   }
 `;
 
-const WorkInfo = styled(Flex)`
-  margin-top: 70px;
-  width: 1200px;
-  padding: 24px 40px;
-`;
-
-const WorkMainTitle = styled.div`
-  text-align: center;
-  font-size: 42px;
-  font-weight: 700;
-  color: #ffffff;
-`;
-
-const WorkItem = styled(Flex)``;
-
-const WorkTitle = styled.div`
-  font-size: 24px;
-  font-weight: 700;
-  color: #ffffff;
-`;
-
-const WorkDesc = styled.div`
-  font-size: 18px;
-  font-weight: 400;
-  color: #b9b9bb;
-`;
-
 const Cards = styled(Flex)`
   margin: 80px 0 114px;
-  background-color: #272727;
+  background-color: #042c54;
   width: 1200px;
   height: 426px;
   border-radius: 15px;
@@ -245,7 +216,7 @@ const CardItem = styled(Flex)`
   width: 190px;
   height: 140px;
   border-radius: 8px;
-  background-color: #1f2026;
+  background-color: #81afdd;
   line-height: 28px;
   .icon {
     margin-top: 22.3px;

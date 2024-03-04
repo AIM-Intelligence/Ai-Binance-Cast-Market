@@ -167,17 +167,17 @@ const Search = (props: ISearch) => {
     <Container id="searchRoot" style={{ width }}>
       <Flex
         position="relative"
-        border={'1px solid readable.border'}
+        border={'1px #81AFDD readable.border'}
         borderRadius={8}
         onMouseUp={(e) => e.stopPropagation()}
         flexDirection="column"
-        bg="#35363C"
+        bg="#81AFDD"
         boxShadow="0px 4px 24px rgba(0, 0, 0, 0.08)"
         minWidth={[0, 230, 230]}
       >
         <Box
           borderRadius={8}
-          bg="#35363C"
+          bg="#040C18"
           boxShadow="4px 2px 8px rgba(0, 0, 0, 0.08)"
         >
           <Input

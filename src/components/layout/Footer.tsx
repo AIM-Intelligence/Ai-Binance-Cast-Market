@@ -1,23 +1,12 @@
-import { Flex } from '@totejs/uikit';
-import styled from '@emotion/styled';
-import { useLocation } from 'react-router-dom';
-const Footer = () => {
-  const location = useLocation();
-  return (
-    <FooterCon
-      style={{ marginTop: location.pathname != '/' ? '30px' : '' }}
-      alignItems={'center'}
-      justifyContent={'center'}
-    >
-      © 2023 BNB Chain. All rights reserved.
-    </FooterCon>
-  );
-};
+import logo from '../../images/logo.png';
+import './footer.css';
 
-export default Footer;
+const HomeFooter = () => (
+  <div className="bg-[#031B34] absolute bottom-0 right-0 left-0 pb-6">
+    <div className="abc_market__footer-copyright">
+      <p>@2024 ABC & BNB. All rights reserved.</p>
+    </div>
+  </div>
+);
 
-const FooterCon = styled(Flex)`
-  color: #aeafb0;
-  height: 48px;
-  background-color: #000000;
-`;
+export default HomeFooter;

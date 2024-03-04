@@ -136,7 +136,7 @@ const SearchBox = styled.div<{
   justify-content: space-between;
   background: ${(props: any) => props.theme.bg?.top.normal};
   box-shadow: ${(props: any) =>
-    props.searchDropDown ? '0px 4px 24px rgba(0, 0, 0, 0.36);' : ''};
+    props.searchDropDown ? '0px 4px 24px #042c54;' : ''};
   box-sizing: border-box;
   border: ${(props: any) => {
     return props.hideBg

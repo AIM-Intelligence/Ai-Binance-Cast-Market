@@ -232,7 +232,7 @@ const List = (props: any) => {
         columns={columns}
         data={folderList}
         loading={loading}
-        hoverBg={'#14151A'}
+        hoverBg={'#042c54'}
       />
     </Container>
   );

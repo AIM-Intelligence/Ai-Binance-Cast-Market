@@ -130,11 +130,11 @@ const TrendingList = () => {
   return (
     <Container>
       <Table
-        containerStyle={{ padding: '0', background: '#1E2026' }}
+        containerStyle={{ padding: '12', background: '#031B34' }}
         columns={columns}
         data={list}
         loading={loading}
-        hoverBg={'#14151A'}
+        hoverBg={'#040C18'}
         withContainer={true}
       />
     </Container>

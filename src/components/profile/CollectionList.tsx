@@ -214,7 +214,7 @@ const CollectionList = (props: ICollectionList) => {
         columns={columns}
         data={list}
         loading={loading}
-        hoverBg={'#14151A'}
+        hoverBg={'#042c54'}
         customComponent={showNoData && <CollNoData></CollNoData>}
       />
     </Container>

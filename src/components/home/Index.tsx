@@ -6,16 +6,11 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import AllList from './All';
 import TrendingList from './Trending';
 
-
 enum Type {
   All = 'all',
   Trending = 'trending',
 }
 const navItems = [
-  {
-    name: 'Trending',
-    key: Type.Trending,
-  },
   {
     name: 'All',
     key: Type.All,
@@ -35,12 +30,14 @@ const HomeList = () => {
     <Container>
       <NavBar active={currentTab} onChange={handleTabChange} items={navItems} />
       <Box h={20} />
-      {currentTab === Type.All ? (
+
+      <AllList></AllList>
+
+      {/* {currentTab === Type.All ? (
         <AllList></AllList>
       ) : (
         <TrendingList></TrendingList>
-      )}
-      
+      )} */}
     </Container>
   );
 };
@@ -50,5 +47,4 @@ export default HomeList;
 const Container = styled.div`
   margin-top: 100px;
   width: 1123px;
-  
 `;

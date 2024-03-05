@@ -31,6 +31,8 @@ const AllList = () => {
   const { address } = useAccount();
   const { list, loading, total } = useGetListed(address, page, 10);
 
+
+
   const state = useGlobal();
 
   const columns = [
@@ -144,15 +146,14 @@ const AllList = () => {
           list.length,
         )}  Collections (Total of ${total})`}
         containerStyle={{ padding: '12', background: '#031B34' }}
-       
         pagination={{
           current: page,
           pageSize: 10,
-          total: total,
+          total: 6,
           onChange: handlePageChange,
         }}
         columns={columns}
-        data={list}
+        data={list.slice(0, 6)}
         loading={loading}
         hoverBg={'#040C18'}
       />

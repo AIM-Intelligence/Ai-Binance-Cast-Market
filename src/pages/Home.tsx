@@ -15,7 +15,7 @@ import logo from '../images/logo.png';
 import HomeFooter from '../components/layout/HomeFooter';
 const Home = () => {
   return (
-    <section >
+    <section className="overflow-x-clip">
       <Container flexDirection={'column'} alignItems={'center'}>
         <BannerInfo className="overflow-x-clip abc_market__header section__padding">
           <div className="">

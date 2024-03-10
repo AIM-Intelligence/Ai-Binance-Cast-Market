@@ -49,7 +49,6 @@ export default function Layout({ children }: { children: ReactNode }) {
       <Container flexDirection={'column'} justifyContent={'space-between'}>
         <Header />
         <Main>{children}</Main>
-
         <Footer />
       </Container>
 

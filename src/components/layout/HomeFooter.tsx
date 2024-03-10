@@ -2,16 +2,20 @@ import logo from '../../images/logo.png';
 import './footer.css';
 
 const HomeFooter = () => (
-  <div className="abc_market__footer section__padding">
+  <div className="abc_market__footer section__padding w-screen translate-y-24 ">
     <div className="abc_market__footer-heading">
       <h1 className="gradient__text">
         Do you want to step in to the future before others
       </h1>
     </div>
 
-    <div className="abc_market__footer-btn">
-      <p>Make Your Value with AI spokesperson</p>
-    </div>
+    <a
+      href="https://ai-binance-cast.vercel.app"
+      target="_blank"
+      className="abc_market__footer-btn"
+    >
+      <p>Upload Your Value with ABC</p>
+    </a>
 
     <div className="abc_market__footer-links">
       <div className="abc_market__footer-links_logo">

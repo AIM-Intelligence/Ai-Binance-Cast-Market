@@ -21,8 +21,6 @@ const TrendingList = () => {
 
   const { list, loading } = useTrendingList();
 
-
-
   const state = useGlobal();
   const { address } = useAccount();
 

@@ -31,8 +31,6 @@ const AllList = () => {
   const { address } = useAccount();
   const { list, loading, total } = useGetListed(address, page, 10);
 
-
-
   const state = useGlobal();
 
   const columns = [
@@ -149,11 +147,11 @@ const AllList = () => {
         pagination={{
           current: page,
           pageSize: 10,
-          total: 6,
+          total: total,
           onChange: handlePageChange,
         }}
         columns={columns}
-        data={list.slice(0, 6)}
+        data={list}
         loading={loading}
         hoverBg={'#040C18'}
       />

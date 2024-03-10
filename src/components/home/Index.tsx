@@ -30,7 +30,7 @@ const HomeList = () => {
     <Container>
       <NavBar active={currentTab} onChange={handleTabChange} items={navItems} />
       <Box h={20} />
-
+     
       <AllList></AllList>
 
       {/* {currentTab === Type.All ? (

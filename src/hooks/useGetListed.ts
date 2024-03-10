@@ -7,6 +7,27 @@ import { MarketPlaceContract } from '../base/contract/marketPlaceContract';
 import { headGroupNFT } from '../utils/gfSDK';
 import { parseGroupName } from '../utils';
 
+interface ResultItem {
+  metaData: {
+    description: string;
+    externalUrl: string;
+    groupName: string;
+    image: string;
+    attributes: {
+      traitType: string;
+      value: string;
+    }[];
+  };
+  name: string;
+  groupName: string;
+  type: string;
+  ownerAddress: string;
+  price: string;
+  url: string;
+  id: string;
+  listTime: string;
+}
+
 export const useGetListed = (realAddress?: string, page = 0, pageSize = 10) => {
   const [list, setList] = useState(<any>[]);
   const [loading, setLoading] = useState(true);
@@ -28,9 +49,9 @@ export const useGetListed = (realAddress?: string, page = 0, pageSize = 10) => {
       const t = _ids.map((item: any) => {
         return headGroupNFT(item);
       });
-      let result = await Promise.all(t);
+      let result: any = await Promise.all(t);
       result = result
-        .map((item: any, index) => {
+        .map((item: any, index: any) => {
           if (!Object.keys(item).length) return false;
           const {
             metaData: { attributes, groupName },
@@ -51,9 +72,16 @@ export const useGetListed = (realAddress?: string, page = 0, pageSize = 10) => {
             listTime: _dates[index],
           };
         })
-        .filter((item) => item);
-      setList(result);
-      setTotal(_totalLength);
+        .filter((item: any) => item);
+      console.log('result', result);
+
+      const filteredResult = result.filter((item: any) =>
+        item.groupName.startsWith('ABC'),
+      );
+      console.log('tota;', filteredResult);
+      console.log('lenght', filteredResult.length);
+      setList(filteredResult);
+      setTotal(filteredResult.length);
     } else {
       setList([]);
     }
